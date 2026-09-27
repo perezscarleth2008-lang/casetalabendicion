@@ -1,0 +1,124 @@
+<?php require __DIR__."/config/config.php"; ?><!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mi Bendición - sabor casero en Las Mangas, Cuenca del Río Cangrejal, La Ceiba, Atlántida.">
+<title>Mi Bendición | Sabor de nuestra comunidad</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+<img src="assets/img/logo.svg" width="48" height="48" alt="Mi Bendición"> <span>MI BENDICIÓN</span>
+</a>
+<button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+<div class="collapse navbar-collapse" id="menuPrincipal">
+<ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+<li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+<li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+<li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-amarillo nav-order" href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank"><i class="fa-brands fa-whatsapp"></i> Pedir</a></li>
+</ul>
+</div></div></nav>
+
+<section id="inicio" class="page-section hero-section">
+<div class="hero-glow"></div>
+<div class="container position-relative">
+<div class="row align-items-center min-vh-100 py-5">
+<div class="col-lg-7 text-center text-lg-start">
+<div class="hero-kicker"><span></span> SABOR CASERO · LAS MANGAS <span></span></div>
+<img src="assets/img/logo.svg" class="logo-hero mb-4" alt="Logo Mi Bendición">
+<h1>El sabor que <em>nace</em><br>en nuestra comunidad.</h1>
+<p class="hero-copy">Pollo frito, baleadas, pastelitos y bebidas preparados con ese toque familiar que hace especial a <strong>Mi Bendición</strong>.</p>
+<div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+<a href="#productos" class="btn btn-amarillo btn-lg px-4">Descubrir menú <i class="fa-solid fa-arrow-down ms-2"></i></a>
+<a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-light btn-lg px-4"><i class="fa-brands fa-whatsapp text-success"></i> Pedir ahora</a>
+</div>
+<div class="hero-mini-info mt-5">
+<div><i class="fa-solid fa-location-dot"></i><span>Las Mangas<br><small>Cuenca del Río Cangrejal</small></span></div>
+<div><i class="fa-solid fa-clock"></i><span id="horaActual">--:--:--<br><small id="fechaActual">Cargando...</small></span></div>
+</div>
+</div>
+<div class="col-lg-5 mt-5 mt-lg-0">
+<div class="hero-food-card">
+<img src="assets/img/pollo-frito.png" alt="Pollo frito de Mi Bendición">
+<div class="hero-food-label"><span>ESPECIALIDAD</span><strong>Pollo frito</strong><small>Desde L 80</small></div>
+</div>
+</div>
+</div></div>
+<div class="scroll-hint"><i class="fa-solid fa-chevron-down"></i><span>Explora nuestra página</span></div>
+</section>
+
+<section id="servicios" class="page-section section-white section-spacious">
+<div class="container">
+<div class="section-heading"><span class="eyebrow">LO QUE HACEMOS</span><h2>Servicios pensados para ti</h2><p>Queremos que disfrutar tus favoritos sea fácil, rápido y agradable.</p></div>
+<div class="row g-4 mt-3">
+<div class="col-12 col-sm-6 col-lg-3 reveal"><div class="premium-card service-card-v3"><div class="service-number">01</div><div class="service-icon"><i class="fa-solid fa-bag-shopping"></i></div><h3>Pedidos para llevar</h3><p>Haz tu pedido y llévate tus favoritos para disfrutar donde prefieras.</p><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank">Consultar <i class="fa-solid fa-arrow-right"></i></a></div></div>
+<div class="col-md-4 reveal"><div class="premium-card service-card-v3 featured"><div class="service-number">02</div><div class="service-icon"><i class="fa-solid fa-utensils"></i></div><h3>Comida casera</h3><p>Sabores tradicionales preparados con cercanía y ese toque de hogar.</p><a href="#productos">Ver menú <i class="fa-solid fa-arrow-right"></i></a></div></div>
+<div class="col-12 col-sm-6 col-lg-3 reveal"><div class="premium-card service-card-v3"><div class="service-number">03</div><div class="service-icon whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></div><h3>Pedidos por WhatsApp</h3><p>Escríbenos directamente para consultar precios, disponibilidad y promociones.</p><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank">Escribir ahora <i class="fa-solid fa-arrow-right"></i></a></div></div><div class="col-md-4 reveal"><div class="premium-card service-card-v3 delivery-card"><div class="service-number">04</div><div class="service-icon delivery-icon"><i class="fa-solid fa-motorcycle"></i></div><h3>Servicio a domicilio</h3><p><strong>Paga L 20</strong> y llevamos tu pedido hasta donde tú quieras, sujeto a cobertura.</p><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank">Pedir domicilio <i class="fa-solid fa-arrow-right"></i></a></div></div>
+</div>
+</div></section>
+
+<section id="productos" class="page-section section-dark section-spacious">
+<div class="container">
+<div class="section-heading light"><span class="eyebrow">NUESTRO MENÚ</span><h2>Sabores para cada antojo</h2><p>Elige tu favorito y consulta tu pedido por WhatsApp.</p></div>
+<div class="row g-4 mt-3">
+<div class="col-sm-6 col-lg-3 reveal"><div class="menu-card"><div class="menu-photo"><div class="menu-title">Pollo frito</div><img src="assets/img/pollo-frito.png" alt="Pollo frito"><span class="product-category">Pollo frito</span></div><div class="menu-body"><h3>Pollo frito</h3><p>La especialidad de la casa.</p><div class="price">L 80 <small>·</small> L 100 <small>·</small> L 150</div><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-amarillo w-100">Pedir <i class="fa-brands fa-whatsapp ms-1"></i></a></div></div></div>
+<div class="col-sm-6 col-lg-3 reveal"><div class="menu-card"><div class="menu-photo"><div class="menu-title">Baleada</div><img src="assets/img/baleadas.png" alt="Baleada"><span class="product-category">Baleada</span></div><div class="menu-body"><h3>Baleadas</h3><p>Un clásico de nuestra cocina.</p><div class="price">L 15 <small>·</small> L 20 <small>·</small> L 30</div><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-amarillo w-100">Pedir <i class="fa-brands fa-whatsapp ms-1"></i></a></div></div></div>
+<div class="col-sm-6 col-lg-3 reveal"><div class="menu-card"><div class="menu-photo"><div class="menu-title">Pastelitos de harina</div><img src="assets/img/pastelitos-harina.png" alt="Pastelitos de harina"><span class="product-category">Pastelitos de harina</span></div><div class="menu-body"><h3>Pastelitos de harina</h3><p>Dorados y preparados con sabor casero.</p><div class="price">L 13 <small>·</small> L 15</div><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-amarillo w-100">Pedir <i class="fa-brands fa-whatsapp ms-1"></i></a></div></div></div>
+<div class="col-sm-6 col-lg-3 reveal"><div class="menu-card"><div class="menu-photo"><div class="menu-title">Pastelitos de maseca</div><img src="assets/img/pastelitos-maseca.png" alt="Pastelitos de maseca"><span class="product-category">Pastelitos de maseca</span></div><div class="menu-body"><h3>Pastelitos de maseca</h3><p>Una opción con sabor tradicional.</p><div class="price">L 15</div><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-amarillo w-100">Pedir <i class="fa-brands fa-whatsapp ms-1"></i></a></div></div></div>
+</div>
+<div class="row g-3 mt-4">
+<div class="col-6 col-lg-3 reveal"><div class="mini-menu"><img src="assets/img/coca-cola.png" alt="Coca-Cola"><div><strong>Coca-Cola</strong><span>L 25</span></div></div></div>
+<div class="col-6 col-lg-3 reveal"><div class="mini-menu"><img src="assets/img/pepsi.png" alt="Pepsi"><div><strong>Pepsi</strong><span>L 25</span></div></div></div>
+<div class="col-6 col-lg-3 reveal"><div class="mini-menu"><img src="assets/img/canada-dry.png" alt="Canada Dry"><div><strong>Canada Dry</strong><span>L 25</span></div></div></div>
+<div class="col-6 col-lg-3 reveal"><div class="mini-menu"><img src="assets/img/cafe.png" alt="Café"><div><strong>Café</strong><span>L 10</span></div></div></div>
+</div>
+</div></section>
+
+<section id="promociones" class="page-section section-red section-spacious">
+<div class="container">
+<div class="promo-layout">
+<div class="promo-copy"><span class="eyebrow yellow">HOY PUEDE SER UN BUEN DÍA</span><h2>¿Se te antojó algo?</h2><p>Pregunta por nuestras promociones y combos disponibles. Lo mejor es que puedes escribirnos directamente desde aquí.</p><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-amarillo btn-lg">Ver promociones <i class="fa-brands fa-whatsapp ms-2"></i></a></div>
+<div class="promo-ticket"><div class="ticket-top">MI BENDICIÓN</div><i class="fa-solid fa-fire"></i><h3>Promoción del día</h3><p>Consulta disponibilidad y precios por WhatsApp.</p><div class="ticket-line"></div><small>Las Mangas · Cangrejal</small></div>
+</div>
+</div></section>
+
+<section id="nosotros" class="page-section section-white section-spacious">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-lg-5 reveal"><div class="about-photo"><img src="assets/img/baleadas.png" alt="Baleadas Mi Bendición"><div class="about-badge about-badge-top"><strong>100%</strong><span>Hecho con<br>cariño</span></div></div></div>
+<div class="col-lg-7 reveal"><span class="eyebrow">NUESTRA HISTORIA</span><h2 class="display-5 fw-bold">Más que comida,<br><span class="text-danger">somos comunidad.</span></h2><p class="lead mt-4">Mi Bendición es un negocio familiar de <strong>Las Mangas</strong>, en la Cuenca del Río Cangrejal, La Ceiba, Atlántida.</p><p>Buscamos ofrecer alimentos con sabor casero, una atención cercana y productos que forman parte de nuestra vida cotidiana.</p><div class="about-points"><div><i class="fa-solid fa-heart"></i><span><strong>Sabor casero</strong><small>Un toque que nos identifica.</small></span></div><div><i class="fa-solid fa-people-group"></i><span><strong>Familia</strong><small>Atención cercana y de confianza.</small></span></div><div><i class="fa-solid fa-location-dot"></i><span><strong>Orgullo local</strong><small>Desde nuestra comunidad para ti.</small></span></div></div></div>
+</div></div></section>
+
+<section id="contacto" class="page-section section-light section-spacious">
+<div class="container">
+<div class="section-heading"><span class="eyebrow">ENCUÉNTRANOS</span><h2>Estamos cerca de ti</h2><p>Visítanos en Las Mangas o escríbenos para hacer tu pedido.</p></div>
+<div class="row g-4 mt-3">
+<div class="col-lg-5 reveal"><div class="contact-panel"><div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><small>UBICACIÓN</small><strong>Las Mangas</strong><span>Cuenca del Río Cangrejal<br>La Ceiba, Atlántida, Honduras</span></div></div><div class="contact-item"><i class="fa-solid fa-clock"></i><div><small>HORA ACTUAL</small><strong id="horaContacto">--:--:--</strong><span id="fechaContacto">Cargando...</span></div></div><div class="contact-actions"><a href="https://www.google.com/maps/search/?api=1&query=15.715556,-86.723333" target="_blank" class="btn btn-negro"><i class="fa-solid fa-map-location-dot"></i> Cómo llegar</a><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div></div></div>
+<div class="col-lg-7 reveal"><div class="map-wrap"><iframe title="Mapa de Las Mangas, Cuenca del Río Cangrejal" src="https://www.openstreetmap.org/export/embed.html?bbox=-86.735%2C15.695%2C-86.710%2C15.725&amp;layer=mapnik&amp;marker=15.715556%2C-86.723333" loading="lazy"></iframe></div></div>
+</div></div></section>
+
+<footer>
+<div class="container py-5"><div class="row g-4">
+<div class="col-lg-5"><div class="footer-logo"><img src="assets/img/logo.svg" alt="Mi Bendición"><div><strong>MI BENDICIÓN</strong><span>El sabor de nuestra comunidad.</span></div></div></div>
+<div class="col-6 col-lg-3"><h5>Explora</h5><a href="#inicio">Inicio</a><a href="#productos">Productos</a><a href="#promociones">Promociones</a></div>
+<div class="col-6 col-lg-4"><h5>Contacto</h5><span>Las Mangas · Cuenca del Río Cangrejal</span><span>La Ceiba, Atlántida</span><a href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" class="footer-whatsapp"><i class="fa-brands fa-whatsapp"></i> Escríbenos</a></div>
+</div><hr><div class="text-center small">© <span id="anio"></span> Mi Bendición · Hecho con sabor y cariño.</div></div>
+</footer>
+
+<a class="whatsapp-float" href="<?=htmlspecialchars($whatsapp_url)?>" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="backTop" class="back-top" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body></html>
